@@ -1,0 +1,37 @@
+D={}
+
+r=open("/share/data/genetic-code.txt")
+lines=r.readlines()
+for i in lines:
+        parts=i.split()
+        D[parts[0]]=parts[1]
+import random
+U=""
+for i in range(1000):
+	x=random.uniform(0,1)
+	if x>=0 and x<0.3:
+	    U=U+"A"
+	if x>=0.3 and x<0.6:
+	    U=U+"T",
+	if x>=0.6 and x<0.8:
+	    U=U+"G",
+	if x>=0.8 and x<=1:
+	    U=U+"C",
+
+#f=open("/share/data/adh/ALDH.txt")
+#line=f.readline()
+y=0
+z=3
+for k in U:
+        print D[U[y:z]],
+        y=y+3
+        z=z+3
+        if z>692:
+                break
+
+
+#j=raw_input("enter two-letter symbol: ")
+#j=raw_input()
+#print D[j]
+
+print D
