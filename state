@@ -12,7 +12,6 @@ for i in lines:
 	if len(parts)==3:
 		D[parts[0]]=parts[1]+parts[2]
 j=raw_input("enter two-letter symbol: ")
-#j=raw_input()
 print D[j]
 
 #print D
