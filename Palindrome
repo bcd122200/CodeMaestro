@@ -1,0 +1,24 @@
+j=raw_input("DNA sequence: ")
+
+o=""
+p=[]
+
+for i in j:
+	if "A"==i:
+		o=o+"T"
+		p.append("T");
+	if "T"==i:
+		o=o+"A"
+		p.append("A");
+	if "G"==i:
+		o=o+"C"
+		p.append("C");
+	if "C"==i:
+		o=o+"G"
+		p.append("G");
+
+p="".join(p)
+if j==p[::-1]:
+	print "this is a palindrome"
+else:
+	print "this is not a palindrome"
